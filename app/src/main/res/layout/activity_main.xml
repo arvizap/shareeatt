@@ -1,69 +1,75 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#254FB8"
-    android:padding="@dimen/activity_padding"
+    android:background="#465DAF"
+    android:padding="10dp"
     android:gravity="center"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/img_login"
-        android:src="@mipmap/ic_launcher"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:background="#FFFFFF"
-        android:id="@+id/edt_username"
-        android:layout_marginTop="10dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        android:background="#FFFFFF"
-        android:inputType="textCapWords"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/edt_password"/>
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="show password"
-        android:id="@+id/showPass"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background=""
-        android:text="@string/login"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:id="@+id/txt_login"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="@string/or"/>
-    <TextView
-        android:layout_width="match_parent"
+        android:text="Silahkan Masuk"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="350dp"
+        android:id="@+id/silahkanMasuk"
+        >
+    </TextView>
+
+    <EditText
+        android:id="@+id/usernameinput"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background=""
-        android:text="@string/signup"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:id="@+id/txt_signup"/>
-</LinearLayout>
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Username"
+        app:layout_goneMarginTop="30dp"
+        android:layout_marginTop="20dp"
+        android:width="340dp"
+        android:textColor="#FFF"
+        android:outlineAmbientShadowColor="#FFF"
+        android:outlineSpotShadowColor="#FFF"
+        android:backgroundTint="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/silahkanMasuk" />
+
+    <EditText
+        android:id="@+id/passwordinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="340dp"
+        android:backgroundTint="@android:color/background_light"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_marginTop="30dp"
+        android:outlineAmbientShadowColor="#FFF"
+        android:outlineSpotShadowColor="#FFF"
+        android:hint="Password"
+        android:textColor="#FFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameinput" />
+
+    <Button
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:text="Masuk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/passwordinput"></Button>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
